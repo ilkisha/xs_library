@@ -15,6 +15,11 @@ class UserHttpHandler extends UserHttpHandlerAbstract
      */
     public function myProfile(UserServiceInterface $userService, array $formData){
         $currentUser = $userService->currentUser();
+
+        if($currentUser === null) {
+            $this->redirect('login.php');
+        }
+
         if (isset($formData['edit'])) {
             $this->handleEditProcess($userService, $formData);
         } else {
@@ -27,7 +32,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
      */
     public function index(UserServiceInterface $userService)
     {
-        $this->render("home/index");
+        $this->render('home/index');
     }
 
     /**
@@ -57,7 +62,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
     {
         if(!$userService->isLogged())
         {
-            $this->redirect("login.php");
+            $this->redirect('login.php');
         }
 
         $currentUser = $userService->currentUser();
@@ -65,7 +70,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
         if (isset($formData['edit'])) {
             $this->handleEditProcess($userService, $formData);
         } else {
-            $this->render("users/profile", $currentUser);
+            $this->render('users/profile', $currentUser);
         }
     }
 
@@ -79,7 +84,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
         if (isset($formData['login'])) {
             $this->handleLoginProcess($userService, $formData);
         } else {
-            $this->render("users/login");
+            $this->render('users/login');
         }
     }
 
@@ -93,7 +98,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
         if (isset($formData['register'])) {
             $this->handleRegisterProcess($userService, $formData);
         } else {
-            $this->render("users/register");
+            $this->render('users/register');
         }
     }
 
@@ -153,7 +158,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
             $_SESSION['id'] = $currentUser->getId();
             $_SESSION['admin'] = $currentUser->getIsAdmin();
             if($currentUser->getIsAdmin() == '0'){
-                $this->redirect("all_books.php");
+                $this->redirect("allBooks.php");
                 return;
             }
             $this->redirect("profile.php");

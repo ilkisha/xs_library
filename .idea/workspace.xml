@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5643ddf3-8483-4bf0-be1a-477bf7dd099d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5643ddf3-8483-4bf0-be1a-477bf7dd099d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/Books/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/Books/BookService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/books/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/books/all_books.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/allBooks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/books/my_booksCollections.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/myBooksCollections.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/books/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/viewBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/home/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/users/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/users/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_books.php" beforeDir="false" afterPath="$PROJECT_DIR$/allBooks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_book.php" beforeDir="false" afterPath="$PROJECT_DIR$/createBook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_booksCollections.php" beforeDir="false" afterPath="$PROJECT_DIR$/myBooksCollections.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_book.php" beforeDir="false" afterPath="$PROJECT_DIR$/viewBook.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,10 +82,29 @@
     </expand>
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1UKZZW3S35O3vwxy8FsYxm5io1B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -75,57 +112,31 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="SQL Resolution Scopes" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.18829113" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3663afd2" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@535eedc8" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2872f35a" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@37a59e8b" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b9e3730" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7d8877e6" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6762ffbf" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@234642c9" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -138,11 +149,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575107302481</updated>
-      <workItem from="1575107303697" duration="114322000" />
+      <workItem from="1575107303697" duration="115379000" />
+      <workItem from="1575579294933" duration="89000" />
+      <workItem from="1579529435024" duration="15309000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579535417914">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1579535417914" />
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689164985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689164985" />
+    <state width="905" height="219" key="GridCell.Tab.0.bottom" timestamp="1579636665930">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="219" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579636665930" />
+    <state width="905" height="219" key="GridCell.Tab.0.center" timestamp="1579636665929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="219" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579636665929" />
+    <state width="905" height="219" key="GridCell.Tab.0.left" timestamp="1579636665929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="219" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579636665929" />
+    <state width="905" height="219" key="GridCell.Tab.0.right" timestamp="1579636665930">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="219" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579636665930" />
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1579636688722">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1579636688722" />
   </component>
 </project>

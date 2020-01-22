@@ -46,6 +46,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
      */
     public function add(array $formData = [])
     {
+
         $user = $this->userService->currentUser();
 
         if(!$this->userService->isLogged()) {
@@ -57,6 +58,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             $this->redirect('profile.php');
             exit;
         }
+
 
         if(isset($formData['add'])){
             $this->handleAddProcess($formData);
@@ -75,10 +77,17 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             /**
              * @var BookDTO $book
              */
+            if($formData['name'] === '' || $formData['isbn'] === '' || $formData['description'] === ''
+            || $formData['image'] === ''){
+                $this->render('books/add', null, [new ErrorDTO('
+                Missing data fields')]);
+            }
             $book = $this->dataBinder->bind($formData, BookDTO::class);
             $book->setUser($currentUser);
-            $this->bookService->add($book);
-            $this->redirect('all_books.php');
+            if($this->bookService->add($book)){
+                $this->redirect('allBooks.php');
+            }
+            $this->render('books/add', null , [new ErrorDTO('This ISBN already exists!')]);
         }catch (\Exception $ex){
             echo $ex->getMessage();
         }
@@ -90,7 +99,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
         $books = $this->bookService->getAll();
         $data['user'] = $user;
         $data['books'] = $books;
-        $this->render('books/all_books', $data);
+        $this->render('books/allBooks', $data);
     }
 
     public function view($getData = [])
@@ -115,7 +124,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
-        $this->render('books/my_booksCollections', $this->getMyBooksFromDb());
+        $this->render('books/myBooksCollections', $this->getMyBooksFromDb());
     }
 
     public function delete(array $getData = [])
@@ -126,7 +135,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
         }
 
         $this->bookService->delete((int)($getData['id']));
-        $this->redirect('all_books.php');
+        $this->redirect('allBooks.php');
     }
 
     public function edit($formData = [], $getData = [])
@@ -141,7 +150,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             $book = $this->dataBinder->bind($formData, BookDTO::class);
             $book->setId((int)$getData['id']);
             $this->bookService->edit($book, (int)$getData['id']);
-            $this->redirect('all_books.php');
+            $this->redirect('allBooks.php');
         }else{
             $book = $this->bookService->getOneById($getData['id']);
             $this->render('books/editBook', $book);
@@ -155,18 +164,18 @@ class BookHttpHandler extends UserHttpHandlerAbstract
 
         if(null === $this->bookService->checkBookExistInCollection($bookId, $userId)->current()){
             $this->bookService->addToCollection($bookId, $userId);
-            $this->redirect('http://localhost/xs_library/my_booksCollections.php');
+            $this->redirect('http://localhost/xs_library/myBooksCollections.php');
             exit;
         }
 
-        $this->redirect('http://localhost/xs_library/my_booksCollections.php');
+        $this->redirect('http://localhost/xs_library/myBooksCollections.php');
     }
 
     public function removeMyBook($getData)
     {
         $bookId = (int)$getData['id'];
         $this->bookService->removeMyBook($bookId);
-        $this->redirect("http://localhost/xs_library/my_booksCollections.php");
+        $this->redirect("http://localhost/xs_library/myBooksCollections.php");
     }
 
     private function getMyBooksFromDb() {

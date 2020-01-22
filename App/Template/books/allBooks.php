@@ -4,9 +4,9 @@
 <h1>All Books</h1>
 
 <?php if($data['user']->getIsAdmin() == '1'): ?>
-<a href="create_book.php">Create book</a><br/>
+<a href="createBook.php">Create book</a><br/>
 <?php else: ?>
-<a href="my_booksCollections.php">My Books</a><br>
+<a href="myBooksCollections.php">My Books</a><br>
 <?php endif; ?>
 <a href="myProfile.php">Edit Profile</a><br/>
 <a href="profile.php">My Profile</a><br/>

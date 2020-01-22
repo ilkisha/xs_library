@@ -148,4 +148,11 @@ class BookRepository extends DatabaseAbstract implements BookRepositoryInterface
             ->execute([$bookId]);
         return true;
     }
+
+    public function checkIsbnExist(string $isbn): Generator
+    {
+        return $this->db->query(
+            'SELECT * FROM xs_library.books WHERE isbn = ?'
+        )->execute([$isbn])->fetchAssoc();
+    }
 }

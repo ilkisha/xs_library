@@ -33,7 +33,11 @@ class BookService implements BookServiceInterface
      */
     public function add(BookDTO $bookDTO): bool
     {
-        return $this->bookRepository->insert($bookDTO);
+        if(!$this->bookRepository->checkIsbnExist($bookDTO->getIsbn())->valid()) {
+            return $this->bookRepository->insert($bookDTO);
+        }
+
+        return false;
     }
 
     /**

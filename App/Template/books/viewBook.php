@@ -4,7 +4,7 @@
 
 <h1>View Book</h1>
 
-<h3><a href="all_books.php">Back</a><br/></h3>
+<h3><a href="allBooks.php">Back</a><br/></h3>
 
 <a href="profile.php">My Profile</a><br/>
 

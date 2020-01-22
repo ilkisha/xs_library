@@ -2,7 +2,7 @@
 
 <h1>My Books</h1>
 
-<a href="all_books.php">All Books</a><br/>
+<a href="allBooks.php">All Books</a><br/>
 <a href="myProfile.php">Edit Profile</a><br/>
 <a href="logout.php">Logout</a>
 
@@ -36,5 +36,5 @@
     </form>
 </table>
 <?php else: ?>
-<h1>No books available! You can add books from here: <a href="all_books.php">All books</a> </h1>
+<h1>No books available! You can add books from here: <a href="allBooks.php">All books</a> </h1>
 <?php endif; ?>
