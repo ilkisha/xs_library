@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5643ddf3-8483-4bf0-be1a-477bf7dd099d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5643ddf3-8483-4bf0-be1a-477bf7dd099d.xml" afterDir="false" />
+    <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Service/Books/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/Books/BookService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/all_books.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/allBooks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/my_booksCollections.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/myBooksCollections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/viewBook.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/viewBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/home/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/users/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/users/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_books.php" beforeDir="false" afterPath="$PROJECT_DIR$/allBooks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_book.php" beforeDir="false" afterPath="$PROJECT_DIR$/createBook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_booksCollections.php" beforeDir="false" afterPath="$PROJECT_DIR$/myBooksCollections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_book.php" beforeDir="false" afterPath="$PROJECT_DIR$/viewBook.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +110,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6762ffbf" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@68d8c82b" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@234642c9" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6762ffbf" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -152,8 +136,23 @@
       <updated>1575107302481</updated>
       <workItem from="1575107303697" duration="115379000" />
       <workItem from="1575579294933" duration="89000" />
-      <workItem from="1579529435024" duration="15309000" />
+      <workItem from="1579529435024" duration="19514000" />
     </task>
+    <task id="LOCAL-00001" summary="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
+      <created>1579689185540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579689185540</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
+      <created>1579689409260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579689409260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,10 +180,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1579535417914" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689183965">
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689408054">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689183965" />
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689408054" />
     <state width="905" height="219" key="GridCell.Tab.0.bottom" timestamp="1579636665930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -158,10 +158,10 @@ class UserHttpHandler extends UserHttpHandlerAbstract
             $_SESSION['id'] = $currentUser->getId();
             $_SESSION['admin'] = $currentUser->getIsAdmin();
             if($currentUser->getIsAdmin() == '0'){
-                $this->redirect("allBooks.php");
+                $this->redirect('allBooks.php');
                 return;
             }
-            $this->redirect("profile.php");
+            $this->redirect('profile.php');
         }
     }
 
@@ -171,32 +171,26 @@ class UserHttpHandler extends UserHttpHandlerAbstract
      */
     private function handleEditProcess($userService, $formData)
     {
-        if($formData['password'] == '' || $formData['confirm_password'] == ''){
+        if(($formData['password'] === '' && $formData['confirm_password'] === '') ||
+            ($formData['password'] === $formData['confirm_password'])){
             /** @var UserServiceInterface $userService */
-            $user = $userService->currentUser();
-            $this->render('users/myProfile', $user,
-                [new ErrorDTO('Password or Confirm Password is missing!')]);
+            $user = $this->dataBinder->bind($formData, UserDTO::class);
 
-            return;
-        }
-
-        if($formData['password'] !== $formData['confirm_password']){
-            /** @var UserServiceInterface $userService */
-            $user = $userService->currentUser();
-            $this->render('users/myProfile', $user,
-                [new ErrorDTO('Password and Confirm password should be same!')]);
+            if($userService->edit($user)){
+                $this->redirect('profile.php');
+            }else{
+                $this->render('users/myProfile', $user,
+                    [new ErrorDTO('Edit failed!')]);
+            }
 
             return;
         }
 
         /** @var UserServiceInterface $userService */
-        $user = $this->dataBinder->bind($formData, UserDTO::class);
+        $user = $userService->currentUser();
+        $this->render('users/myProfile', $user,
+            [new ErrorDTO('Password and Confirm password should be same,
+             or one of the fields is missing!')]);
 
-        if($userService->edit($user)){
-            $this->redirect('profile.php');
-        }else{
-            $this->render('users/myProfile', $user,
-                [new ErrorDTO('Edit failed!')]);
-        }
     }
 }
