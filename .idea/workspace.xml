@@ -106,6 +106,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -180,10 +181,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1579535417914" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689164985">
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689183965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689164985" />
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689183965" />
     <state width="905" height="219" key="GridCell.Tab.0.bottom" timestamp="1579636665930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
