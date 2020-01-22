@@ -145,6 +145,11 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
+        if($this->userService->currentUser()->getIsAdmin() === '0'){
+            $this->redirect('allBooks.php');
+            exit;
+        }
+
         if(isset($formData['edit'])){
             /** @var BookDTO $book */
             $book = $this->dataBinder->bind($formData, BookDTO::class);
@@ -175,7 +180,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
     {
         $bookId = (int)$getData['id'];
         $this->bookService->removeMyBook($bookId);
-        $this->redirect("http://localhost/xs_library/myBooksCollections.php");
+        $this->redirect('http://localhost/xs_library/myBooksCollections.php');
     }
 
     private function getMyBooksFromDb() {

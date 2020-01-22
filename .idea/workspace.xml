@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +115,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@236804bf" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@6762ffbf" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
@@ -136,7 +141,7 @@
       <updated>1575107302481</updated>
       <workItem from="1575107303697" duration="115379000" />
       <workItem from="1575579294933" duration="89000" />
-      <workItem from="1579529435024" duration="19514000" />
+      <workItem from="1579529435024" duration="20752000" />
     </task>
     <task id="LOCAL-00001" summary="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
       <created>1579689185540</created>
@@ -152,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579689409260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
+      <created>1579693572147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579693572147</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +192,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1579535417914" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1579689408054">
+    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2" timestamp="1579703231972">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579689408054" />
+    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579703231972" />
     <state width="905" height="219" key="GridCell.Tab.0.bottom" timestamp="1579636665930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -204,5 +216,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1579636688722" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1579693577443">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579693577443" />
   </component>
 </project>
