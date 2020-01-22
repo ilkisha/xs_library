@@ -37,8 +37,8 @@
                 <td><?= $book->getIsbn(); ?></td>
                 <td><?= $book->getDescription(); ?></td>
                 <td><img src="<?= $book->getImage(); ?>"/></td>
-                <td><a href="view_book.php?id=<?= $book->getId();?>">details</a></td>
-                <?php if($data['user']->getIsAdmin() == '1'): ?>
+                <td><a href="viewBook.php?id=<?= $book->getId();?>">details</a></td>
+                <?php if($data['user']->getIsAdmin() === '1'): ?>
                 <td><a href="editBook.php?id=<?= $book->getId(); ?>">edit book</a></td>
                 <td><a href="deleteBook.php?id=<?= $book->getId(); ?>">delete book</a></td>
                 <?php endif; ?>

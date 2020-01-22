@@ -28,7 +28,7 @@
                 <td><?= $book->getIsbn(); ?></td>
                 <td><?= $book->getDescription(); ?></td>
                 <td><img src="<?= $book->getImage(); ?>"/></td>
-                <td><a href="view_book.php?id=<?= $book->getId(); ?>">details</a></td>
+                <td><a href="viewBook.php?id=<?= $book->getId(); ?>">details</a></td>
                 <td><a href="removeMyBook.php?id=<?= $book->getId(); ?>">remove</a></td>
             </tr>
         <?php endforeach; ?>

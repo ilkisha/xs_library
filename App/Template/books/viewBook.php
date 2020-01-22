@@ -13,7 +13,7 @@
 <p><b>ISBN:</b> <?= $data['book']->getIsbn(); ?> </p>
 <p><b>Description:</b> <?= $data['book']->getDescription(); ?> </p>
 
-<?php if($data['isAdmin'] == '0'): ?>
+<?php if($data['isAdmin'] === '0'): ?>
     <a href="addToCollection.php/?id=<?= $data['book']->getId(); ?>">Add to My collection</a>
 <?php endif; ?>
 <br/>
