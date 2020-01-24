@@ -3,8 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="407378f9-ddb5-44b9-af32-8dc397aae3c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/allBooks.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/allBooks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Template/books/myBooksCollections.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/books/myBooksCollections.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Data/BookDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Data/BookDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Data/ErrorDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Data/ErrorDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Data/UserDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Data/UserDTO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/BookHttpHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/UserHttpHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/UserHttpHandlerAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/UserHttpHandlerAbstract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Repository/Books/BookRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/Books/BookService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/Books/BookService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/Books/BookServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/Books/BookServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/users/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Template/users/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Template/users/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allPendingUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/allPendingUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +111,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SQL Resolution Scopes" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -111,12 +126,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@68d8c82b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@236804bf" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@74f54977" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -142,7 +152,8 @@
       <updated>1575107302481</updated>
       <workItem from="1575107303697" duration="115379000" />
       <workItem from="1575579294933" duration="89000" />
-      <workItem from="1579529435024" duration="21340000" />
+      <workItem from="1579529435024" duration="30659000" />
+      <workItem from="1579793289821" duration="5625000" />
     </task>
     <task id="LOCAL-00001" summary="1. Change the `isbn` field and set the index UNIQUE in a books table. &#10;2. Rename every snake-case file to camel-case.">
       <created>1579689185540</created>
@@ -172,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579703382008</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edit BookHttpHandler-&gt;edit(), and prevent book editing, if user is not Admin!">
+      <created>1579703863331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579703863331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,10 +219,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="93" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1579535417914" />
-    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2" timestamp="1579703850348">
+    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2" timestamp="1579703862253">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579703850348" />
+    <state x="271" y="73" width="864" height="655" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579703862253" />
     <state width="905" height="219" key="GridCell.Tab.0.bottom" timestamp="1579636665930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -225,9 +243,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1579636688722" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1579704795544">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579704795544" />
     <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1579693577443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579693577443" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579779990761">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1579779990761" />
   </component>
 </project>

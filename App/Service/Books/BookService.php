@@ -119,4 +119,9 @@ class BookService implements BookServiceInterface
     {
         return $this->bookRepository->removeAddedBook($bookId);
     }
+
+    public function checkUrlIdExistOrValid(int $urlId): \Generator
+    {
+        return $this->bookRepository->checkUrlIdExistOrValid($urlId);
+    }
 }

@@ -81,6 +81,10 @@ class UserHttpHandler extends UserHttpHandlerAbstract
     public function login(UserServiceInterface $userService,
                           array $formData = [])
     {
+        if(isset($_SESSION['id'])) {
+            $this->redirect('profile.php');
+        }
+
         if (isset($formData['login'])) {
             $this->handleLoginProcess($userService, $formData);
         } else {
@@ -108,19 +112,20 @@ class UserHttpHandler extends UserHttpHandlerAbstract
      */
     private function handleRegisterProcess($userService, $formData)
     {
-        if ($formData['first_name'] == '' || $formData['last_name'] == '' || $formData['email'] == '' ||
-            $formData['password'] == '' || $formData['confirm_password'] == '') {
+        if ($formData['first_name'] === '' || $formData['last_name'] === '' || $formData['email'] === '' ||
+            $formData['password'] === '' || $formData['confirm_password'] === '') {
             $this->render('users/register', null,
                 [new ErrorDTO('Missing parameters!')]);
-            return;
+
+            exit;
         }
 
         try {
             $user = $this->dataBinder->bind($formData, UserDTO::class);
             $userService->register($user, $formData['confirm_password']);
-            $this->redirect("login.php");
+            $this->redirect('login.php');
         } catch (\Exception $e) {
-            $this->render("users/register", null,
+            $this->render('users/register', null,
                 [$e->getMessage()]);
         }
     }
@@ -138,18 +143,18 @@ class UserHttpHandler extends UserHttpHandlerAbstract
         $currentUser = $this->dataBinder->bind($formData, UserDTO::class);
         $currentUser = $userService->getEmail($currentUser->getEmail());
 
-        if ($formData['email'] == '' || $formData['password'] == '') {
+        if ($formData['email'] === '' || $formData['password'] === '') {
             $this->render('users/login', null, [new ErrorDTO('Please enter email and password!')]);
             return;
         }
 
         if (null === $user) {
-            $this->render("users/login", $currentUser,
-                [new ErrorDTO("Email does not exist or password mismatch.")]);
+            $this->render('users/login', $currentUser,
+                [new ErrorDTO('Email does not exist or password mismatch.')]);
             return;
         }
 
-        if($currentUser->getActive() != '1'){
+        if($currentUser->getActive() !== '1'){
             $errorMessage = new ErrorDTO( 'Your registration is not approved by admin yet!');
             $this->render('users/login', null,
                 [$errorMessage]);
@@ -157,7 +162,7 @@ class UserHttpHandler extends UserHttpHandlerAbstract
         } else if (null !== $currentUser) {
             $_SESSION['id'] = $currentUser->getId();
             $_SESSION['admin'] = $currentUser->getIsAdmin();
-            if($currentUser->getIsAdmin() == '0'){
+            if($currentUser->getIsAdmin() === '0'){
                 $this->redirect('allBooks.php');
                 return;
             }

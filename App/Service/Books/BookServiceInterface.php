@@ -13,6 +13,7 @@ interface BookServiceInterface
     public function delete(int $id) : bool;
     public function addToCollection(int $bookId, int $userId): bool;
     public function checkBookExistInCollection(int $bookId, int $userId) : \Generator;
+    public function checkUrlIdExistOrValid(int $urlId) : \Generator;
 
     /**
      * @return \Generator|BookDTO[]

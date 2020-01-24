@@ -41,5 +41,4 @@ abstract class UserHttpHandlerAbstract
     {
         header("Location: $url");
     }
-
 }

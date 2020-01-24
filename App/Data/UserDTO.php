@@ -5,6 +5,9 @@ namespace App\Data;
 
 class UserDTO
 {
+    /**
+     * @var
+     */
     private $id;
     private $firstName;
     private $lastName;

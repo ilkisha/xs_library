@@ -39,7 +39,7 @@ class BookDTO
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -47,7 +47,7 @@ class BookDTO
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id) : void
     {
         $this->id = $id;
     }
@@ -55,7 +55,7 @@ class BookDTO
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -63,7 +63,7 @@ class BookDTO
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(string $name) : void
     {
         $this->name = $name;
     }
@@ -71,7 +71,7 @@ class BookDTO
     /**
      * @return string
      */
-    public function getIsbn(): string
+    public function getIsbn() : string
     {
         return $this->isbn;
     }
@@ -79,7 +79,7 @@ class BookDTO
     /**
      * @param string $isbn
      */
-    public function setIsbn(string $isbn): void
+    public function setIsbn(string $isbn) : void
     {
         $this->isbn = $isbn;
     }
@@ -87,7 +87,7 @@ class BookDTO
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -103,7 +103,7 @@ class BookDTO
     /**
      * @return string
      */
-    public function getImage(): string
+    public function getImage() : string
     {
         return $this->image;
     }
@@ -111,7 +111,7 @@ class BookDTO
     /**
      * @param string $image
      */
-    public function setImage(string $image): void
+    public function setImage(string $image) : void
     {
         $this->image = $image;
     }
@@ -119,7 +119,7 @@ class BookDTO
     /**
      * @return UserDTO
      */
-    public function getUser(): UserDTO
+    public function getUser() : UserDTO
     {
         return $this->user;
     }
@@ -127,7 +127,7 @@ class BookDTO
     /**
      * @param UserDTO $user
      */
-    public function setUser(UserDTO $user): void
+    public function setUser(UserDTO $user) : void
     {
         $this->user = $user;
     }

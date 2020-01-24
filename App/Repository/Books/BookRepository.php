@@ -125,7 +125,7 @@ class BookRepository extends DatabaseAbstract implements BookRepositoryInterface
     }
 
     /**
-     * @param int $id
+     * @param int $userId
      * @return Generator|BookDTO[]
      */
     public function findAddedBooks(int $userId): \Generator
@@ -154,5 +154,12 @@ class BookRepository extends DatabaseAbstract implements BookRepositoryInterface
         return $this->db->query(
             'SELECT * FROM xs_library.books WHERE isbn = ?'
         )->execute([$isbn])->fetchAssoc();
+    }
+
+    public function checkUrlIdExistOrValid(string $id): Generator
+    {
+        return $this->db->query(
+            'SELECT * FROM xs_library.books WHERE id = ?'
+        )->execute([$id])->fetchAssoc();
     }
 }

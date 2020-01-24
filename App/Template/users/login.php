@@ -8,7 +8,7 @@
             /**
              * @var \App\Data\ErrorDTO $error
              */
-            echo "<p style='color: red'>".$error->getMessage()."</p>";
+            echo "<p style='color: red'>".$error->getMessage(). '</p>';
         }
     }
 ?>

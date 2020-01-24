@@ -15,6 +15,7 @@ interface BookRepositoryInterface
     public function addToCollection(int $bookId, int $userId): bool;
     public function checkBookExistInCollection(int $bookId, int $userId) : Generator;
     public function checkIsbnExist(string $isbn) : Generator;
+    public function checkUrlIdExistOrValid(string $id) : Generator;
 
     /**
      * @return Generator|BookDTO[]

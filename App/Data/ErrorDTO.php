@@ -2,9 +2,11 @@
 
 namespace App\Data;
 
-
 class ErrorDTO
 {
+    /**
+     * @var string
+     */
     private $message;
 
     public function __construct(string $message)
@@ -15,7 +17,7 @@ class ErrorDTO
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }

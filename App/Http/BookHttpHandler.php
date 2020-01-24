@@ -54,7 +54,7 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
-        if($user->getIsAdmin() == '0'){
+        if($user->getIsAdmin() === '0'){
             $this->redirect('profile.php');
             exit;
         }
@@ -109,6 +109,11 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
+        if(!($this->bookService->checkUrlIdExistOrValid((int)$getData['id'])->valid())){
+            $this->redirect('allBooks.php');
+            exit;
+        }
+
         $book = $this->bookService->getOneById($getData['id']);
         $userId = $this->userService->currentUser()->getId();
         $isAdmin = $this->userService->currentUser()->getIsAdmin();
@@ -134,6 +139,11 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
+        if($this->userService->currentUser()->getIsAdmin() !== '1'){
+            $this->redirect('profile.php');
+            exit;
+        }
+
         $this->bookService->delete((int)($getData['id']));
         $this->redirect('allBooks.php');
     }
@@ -145,7 +155,12 @@ class BookHttpHandler extends UserHttpHandlerAbstract
             exit;
         }
 
-        if($this->userService->currentUser()->getIsAdmin() === '0'){
+        if($this->userService->currentUser()->getIsAdmin() !== '1'){
+            $this->redirect('allBooks.php');
+            exit;
+        }
+
+        if(!($this->bookService->checkUrlIdExistOrValid((int)$getData['id'])->valid())){
             $this->redirect('allBooks.php');
             exit;
         }
@@ -164,6 +179,11 @@ class BookHttpHandler extends UserHttpHandlerAbstract
 
     public function addToCollection(array $getData = [])
     {
+        if(!($this->bookService->checkUrlIdExistOrValid((int)$getData['id'])->valid())){
+            $this->redirect('allBooks.php');
+            exit;
+        }
+
         $bookId = (int)$getData['id'];
         $userId = (int)$this->userService->currentUser()->getId();
 

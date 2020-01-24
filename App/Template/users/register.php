@@ -4,11 +4,11 @@
 
 <?php
 if(count($errors) > 0){
+    /**
+     * @var \App\Data\ErrorDTO $error
+     */
     foreach ($errors as $error){
-        /**
-         * @var \App\Data\ErrorDTO $error
-         */
-        echo "<p style='color: red'>".$error. '</p>';
+        echo "<p style='color: red'>".$error->getMessage(). '</p>';
     }
 }
 ?>
